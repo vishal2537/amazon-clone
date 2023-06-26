@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-log border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-address border">
+                <p class="deliver">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="location">India</p>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option value="">All</option>
+                </select>
+                <input placeholder="Search Amazon" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="nav-lang border">
+                <div class="usa-flag"></div>
+                <p class="nav-second">
+                    EN <i class="fa-solid fa-caret-down"></i>
+                </p>
+            </div>
+            <div class="nav-signin border">
+                <p>
+                    <span>
+                        Hello, sign in
+                    </span>
+                </p>
+                <p class="nav-second">
+                    Account & Lists
+                </p>
+            </div>
+            <div class="nav-return border">
+                <p>
+                    <span>
+                        Returns
+                    </span>
+                </p>
+                <p class="nav-second">
+                    & Orders
+                </p>
+            </div>
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-opts">
+                <p>Today's Deals</p>
+                <p> Customer Service</p>
+                <p> Registry</p>
+                <p> Gift Cards</p>
+                <p> Sell</p>
+            </div>
+            <div class="panel-deal">
+                Shop Deals in Electronics
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="hero-section">
+        <div class="slider">
+            <div class="carousel-container">
+                <div class="images fade">
+                    <img class="imagess" src="image/hero_image1.jpg">
+                </div>
+                <div class="images fade">
+                    <img class="imagess" src="image/hero_image.jpg">
+                </div>
+                <div class="images fade">
+                    <img class="imagess" src="image/hero_image2.jpg">
+                </div>
+                <div class="images fade">
+                    <img class="imagess" src="image/hero_image3.jpg">
+                </div><div class="images fade">
+                    <img class="imagess" src="image/hero_image4.jpg">
+                </div><div class="images fade">
+                    <img class="imagess" src="image/hero_image5.jpg">
+                </div>
+                
+                <a class="previous" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <!-- Navigation Dots -->
+            <div style="text-align:center" class="dots">
+                <span class="navigation-dot" onclick="currentSlide(1)"></span>
+                <span class="navigation-dot" onclick="currentSlide(2)"></span>
+                <span class="navigation-dot" onclick="currentSlide(3)"></span>
+                <span class="navigation-dot" onclick="currentSlide(4)"></span>
+                <span class="navigation-dot" onclick="currentSlide(5)"></span>
+                <span class="navigation-dot" onclick="currentSlide(6)"></span>
+            </div>
+            
+            <script>
+                var currentIndex = 1;
+                //Show current image
+                showSlides(currentIndex);
+                //Function to move Next
+                function plusSlides(n) {
+                    showSlides(currentIndex += n);
+                }
+                //Function to move back
+                function currentSlide(n) {
+                    showSlides(currentIndex = n);
+                }
+                //Initiate moving of slides
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("images");
+                    var dots = document.getElementsByClassName("navigation-dot");
+                    if (n > slides.length) { currentIndex = 1 }
+                    if (n < 1) { currentIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[currentIndex - 1].style.display = "block";
+                    dots[currentIndex - 1].className += " active";
+                }
+            </script>
+            
+        </div>
+
+    </div>
+    <div class="shop-section">
+        <div class="box">
+            <div class="box-content">
+                <h2>For your Fitness Needs</h2>
+                <div class="box-img" style="background-image: url('image/12_Fuji_Dash_Fitness_.jpg');">
+                </div>
+                <div class="box-link">
+                    <p>See more</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Home refresh ideas</h2>
+                <div class="box-img" style="background-image: url('image/13_home_refresh.jpg');">
+                </div>
+                <div class="box-link">
+                    <p>See more</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Shop Laptops & Tablets</h2>
+                <div class="box-img" style="background-image: url('image/10_Fuji_Dash_Laptops.jpg');">
+                </div>
+                <div class="box-link">
+                    <p>See more</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Shop Smartwatches</h2>
+                <div class="box-img" style="background-image: url('image/11_Fuji_Dash_SmartWatch.jpg');">
+                </div>
+                <div class="box-link">
+                    <p>See more</p>
+                </div>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Clothes</h2>
+                <div class="box-img" style="background-image: url('image/1_image.jpg');">
+                </div>
+                <div class="box-link"><p>See more</p></div>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Health & Personal Care</h2>
+                <div class="box-img" style="background-image: url('image/2_image.jpg');">
+                </div>
+                <div class="box-link"><p>See more</p></div>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Furnitures</h2>
+                <div class="box-img" style="background-image: url('image/3_image.jpg');">
+                </div>
+                <div class="box-link"><p>See more</p></div>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Smartphones</h2>
+                <div class="box-img" style="background-image: url('image/4_image.jpg');">
+                </div>
+                <div class="box-link"><p>See more</p></div>
+            </div>
+        </div>
+        <div class="box5 box">
+            <div class="box-content">
+                <h2>Beauty picks</h2>
+                <div class="box-img" style="background-image: url('image/5_image.jpg');">
+                </div>
+                <div class="box-link"><p>See more</p></div>
+            </div>
+        </div>
+        <div class="box6 box">
+            <div class="box-content">
+                <h2>Pet Care</h2>
+                <div class="box-img" style="background-image: url('image/6_image.jpg');">
+                </div>
+                <div class="box-link"><p>See more</p></div>
+            </div>
+        </div>
+        <div class="box7 box">
+            <div class="box-content">
+                <h2>New arrivals in Toys</h2>
+                <div class="box-img" style="background-image: url('image/7_image.jpg');">
+                </div>
+                <div class="box-link"><p>See more</p></div>
+            </div>
+        </div>
+        <div class="box8 box">
+            <div class="box-content">
+                <h2>Discover Fashion Trends</h2>
+                <div class="box-img" style="background-image: url('image/8_image.jpg');">
+                </div>
+                <div class="box-link"><p>See more</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <footer class="footer">
+        <div class="foot-panel1">
+            Back To Top
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+                <a>Sell products on Amazon</a>
+                <a>Sell on Amazon Business</a>
+                <a>Sell apps on Amazon</a>
+                <a>Become an Affiliate</a>
+                <a>Advertise Your Products</a>
+                <a>Self-Publish with Us</a>
+                <a>Host an Amazon Hub</a>
+                <a>› See More Make Money with Us</a>
+
+            </ul>
+            <ul>
+                <p>Amazon Payment Products</p>
+                <a>Amazon Business Card</a>
+                <a>Shop with Points</a>
+                <a>Reload Your Balance</a>
+                <a>Amazon Currency Converter</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Amazon and COVID-19</a>
+                <a>Your Account</a>
+                <a>Your Orders</a>
+                <a>Shipping Rates & Policies</a>
+                <a>Returns & Replacements</a>
+                <a>Manage Your Content and Device</a>
+                <a>Amazon Assistant</a>
+                <a>Help</a>
+            </ul>
+        </div>
+        <div class="foot-panel3">
+            <div class="logo">
+
+            </div>
+        </div>
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choice</a>
+            </div>
+            <div class="copyright">© 1996-2023, Amazon.com, Inc. or its affiliates</div>
+        </div>
+    </footer>
+</body>
+</html>
